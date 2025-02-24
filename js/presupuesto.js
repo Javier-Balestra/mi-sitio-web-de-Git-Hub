@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("presupuestoForm");
+    const form = document.getElementById("presupuesto-form");
+
+    if (!form) {
+        console.error("No se encontró el formulario con ID 'presupuesto-form'.");
+        return;
+    }
 
     form.addEventListener("submit", function (event) {
         let valid = true;
@@ -45,29 +50,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Verificación de aceptación de condiciones
-        const condiciones = document.getElementById("condiciones");
+        const condiciones = document.getElementById("aceptar-condiciones");
         if (!condiciones.checked) {
             alert("Debe aceptar las condiciones antes de enviar el formulario.");
             valid = false;
         }
 
         if (!valid) {
-            event.preventDefault(); // Evita el envío si hay errores
+            event.preventDefault();
         }
     });
 
     // Cálculo dinámico del presupuesto
     function calcularPresupuesto() {
-        let total = parseFloat(document.getElementById("producto").value);
+        let total = parseFloat(document.querySelector("#producto option:checked").dataset.precio);
         const plazo = parseInt(document.getElementById("plazo").value) || 0;
-        
+
         // Aplicar descuento según plazo
         if (plazo >= 6) total *= 0.9; // 10% de descuento si el plazo es 6 meses o más
 
         // Sumar extras
         document.querySelectorAll("input[type='checkbox']:checked").forEach((checkbox) => {
-            if (checkbox.id !== "condiciones") {
-                total += parseFloat(checkbox.value);
+            if (checkbox.id !== "aceptar-condiciones") {
+                total += parseFloat(checkbox.dataset.precio);
             }
         });
 
