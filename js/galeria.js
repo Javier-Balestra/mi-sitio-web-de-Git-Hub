@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.onload = function () {
     const galleryContainer = document.getElementById("gallery");
     const images = [
         "img/imagen1.jpg",
@@ -22,4 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
         linkElement.appendChild(imgElement);
         galleryContainer.appendChild(linkElement);
     });
-});
+
+    // Asegurarse de que Lightbox se inicia correctamente
+    if (typeof lightbox !== "undefined") {
+        lightbox.init();
+    } else {
+        console.error("Lightbox no está definido. Revisa la carga de la librería.");
+    }
+};
+
