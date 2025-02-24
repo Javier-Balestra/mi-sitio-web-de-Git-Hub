@@ -8,11 +8,18 @@ document.addEventListener("DOMContentLoaded", function () {
         "img/imagen5.jpg"
     ];
 
-    images.forEach((src) => {
+    images.forEach((src, index) => {
+        const linkElement = document.createElement("a");
+        linkElement.href = src;
+        linkElement.setAttribute("data-lightbox", "gallery");
+        linkElement.setAttribute("data-title", `Imagen ${index + 1}`);
+
         const imgElement = document.createElement("img");
         imgElement.src = src;
         imgElement.alt = "Imagen de la galería";
         imgElement.classList.add("gallery-item");
-        galleryContainer.appendChild(imgElement);
+
+        linkElement.appendChild(imgElement);
+        galleryContainer.appendChild(linkElement);
     });
 });
