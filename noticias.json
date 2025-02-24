@@ -1,0 +1,26 @@
+[
+    {
+        "titulo": "Nueva tecnología revoluciona el mercado",
+        "descripcion": "Un avance innovador está cambiando la forma en que usamos la tecnología en nuestro día a día.",
+        "imagen": "img/noticia1.jpg",
+        "url": "noticia1.html"
+    },
+    {
+        "titulo": "Descubren un nuevo planeta habitable",
+        "descripcion": "Astrónomos han identificado un exoplaneta con condiciones similares a la Tierra.",
+        "imagen": "img/noticia2.jpg",
+        "url": "noticia2.html"
+    },
+    {
+        "titulo": "Deportes: Equipo local gana el campeonato",
+        "descripcion": "El equipo de la ciudad ha logrado la victoria en la final del torneo nacional.",
+        "imagen": "img/noticia3.jpg",
+        "url": "noticia3.html"
+    },
+    {
+        "titulo": "Economía en alza: Nuevas oportunidades",
+        "descripcion": "Expertos indican que la economía está mostrando signos positivos de crecimiento.",
+        "imagen": "img/noticia4.jpg",
+        "url": "noticia4.html"
+    }
+]
