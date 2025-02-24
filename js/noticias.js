@@ -1,8 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('noticias.json')
-        .then(response => response.json())
+    fetch('/noticias.json') // 🔥 Corrección para Netlify
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al cargar el archivo JSON');
+            }
+            return response.json();
+        })
         .then(data => {
+            console.log("Noticias cargadas:", data); // 🔥 Verificar en consola
             const noticiasContainer = document.getElementById('noticias');
+
+            // Limpiar el contenedor antes de agregar noticias
+            noticiasContainer.innerHTML = '<h2>Últimas Noticias</h2>';
 
             data.forEach(noticia => {
                 const noticiaElement = document.createElement('article');
@@ -34,3 +43,4 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Error cargando las noticias:', error);
         });
 });
+
