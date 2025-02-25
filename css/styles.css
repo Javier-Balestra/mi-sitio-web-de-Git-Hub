@@ -8,35 +8,41 @@ body {
     overflow-x: hidden; /* Evita desbordamientos horizontales */
 }
 
-/* Cabecera y navegación fija */
+/* Ajustar el header */
 header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre logo y menú */
+    align-items: center;
+    padding: 10px 5%;
+    background: #333;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: #333;
-    color: white;
-    padding: 15px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
-header .logo {
+/* Contenedor del logo */
+.header-left {
     display: flex;
     align-items: center;
 }
 
-header .logo img {
+/* Ajustar el logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
     width: 50px; /* Tamaño del logo */
     margin-right: 10px;
 }
 
-header .logo h1 {
+.logo h1 {
+    color: white;
+    font-size: 20px;
     margin: 0;
-    font-size: 24px;
 }
 
 nav {
@@ -48,7 +54,7 @@ nav {
     color: white;
     padding: 15px 5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000; /* Mantiene la barra sobre el mapa */
