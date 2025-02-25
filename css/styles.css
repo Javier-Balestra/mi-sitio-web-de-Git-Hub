@@ -51,13 +51,8 @@ nav ul {
     gap: 10px; /* Reduce el espacio entre elementos */
     flex-wrap: nowrap; /* Evita que los elementos se envuelvan a otra línea */
     justify-content: flex-end;
-    overflow-x: visible; /* Permite desplazamiento si es necesario */
+    overflow-x: auto; /* Permite desplazamiento si es necesario */
     white-space: nowrap; /* Asegura que los elementos se mantengan en una línea */
-}
-#contacto-btn {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
 }
 
 nav ul li {
@@ -79,6 +74,18 @@ nav ul li a {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+}
+
+/* Estilos específicos para el botón de contacto */
+nav ul li:last-child a {
+    background-color: red !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    white-space: nowrap; /* Evita que el texto se divida */
+    overflow: hidden; /* Evita que el contenido sobresalga */
+    text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es demasiado largo */
+    max-width: 150px; /* Ajusta el tamaño máximo */
 }
 
 /* Resalta la página activa */
@@ -127,18 +134,6 @@ nav ul li a:hover {
         padding: 10px 10px; /* Ajusta el padding para evitar cortes */
         font-size: 14px; /* Reduce el tamaño del texto si es necesario */
     }
-}
-
-/* Asegurar visibilidad del botón de Contacto */
-nav ul li:last-child {
-    display: block !important; /* Asegura que el botón siempre sea visible */
-}
-
-/* Asegurar que el último elemento ("Contacto") no desaparezca */
-nav ul li:last-child {
-    visibility: visible !important;
-    opacity: 1 !important;
-    display: inline-block !important;
 }
 
 /* Contenido principal */
