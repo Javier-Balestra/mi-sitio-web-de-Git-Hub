@@ -11,7 +11,7 @@ body {
 /* Ajustar el header */
 header {
     display: flex;
-    justify-content: space-between; /* Espacio entre logo y menú */
+    justify-content: space-between; /* Espacio entre el logo y el menú */
     align-items: center;
     padding: 10px 5%;
     background: #333;
@@ -22,13 +22,13 @@ header {
     z-index: 1000;
 }
 
-/* Contenedor del logo */
+/* Contenedor del logo y título */
 .header-left {
     display: flex;
     align-items: center;
 }
 
-/* Ajustar el logo */
+/* Estilos del logo */
 .logo {
     display: flex;
     align-items: center;
@@ -36,6 +36,7 @@ header {
 
 .logo img {
     width: 50px; /* Tamaño del logo */
+    height: auto;
     margin-right: 10px;
 }
 
@@ -45,33 +46,21 @@ header {
     margin: 0;
 }
 
+/* Ajustar el nav para que no ocupe todo el ancho */
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #333;
-    color: white;
-    padding: 15px 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Mantiene la barra sobre el mapa */
-    overflow: hidden; /* Evita que el contenido se desborde */
+    background: none; /* Quita el fondo negro extra */
+    position: static;
+    width: auto;
+    padding: 0;
 }
 
+/* Mantiene los botones alineados */
 nav ul {
+    display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
     gap: 10px;
-    flex-wrap: nowrap; /* Evita que los elementos se envuelvan en otra línea */
-    justify-content: center; /* Centra los elementos en la barra */
-    overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
-    white-space: nowrap;
-    padding-right: 20px;
 }
 
 nav ul::-webkit-scrollbar {
@@ -92,7 +81,6 @@ nav ul li a {
     display: block;
     border-radius: 5px;
     text-align: center;
-    min-width: 120px; /* Uniformidad entre botones */
 }
 
 /* Estilos específicos para el botón de contacto */
@@ -114,13 +102,13 @@ nav ul li:last-child a {
 
 
 
-/* Resalta la página activa */
+/* Página activa */
 nav ul li a.active {
     background-color: #ffcc00;
     color: black;
 }
 
-/* Efecto al pasar el mouse */
+/* Efecto hover */
 nav ul li a:hover {
     background-color: #555;
 }
