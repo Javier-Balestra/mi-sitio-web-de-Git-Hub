@@ -292,15 +292,19 @@ footer p a {
     font-size: 14px;
 }
 
-/* Estilos para el mapa */
-#map-container {
-    position: static; /* O prueba con relative */
+/* Contenedor del mapa */
+.map-container {
+    position: relative; 
     width: 100%;
-    height: auto; /* Ajusta según sea necesario */
+    max-width: 800px; /* Ajusta según sea necesario */
+    margin: 0 auto; /* Centra el mapa */
+    overflow: hidden; /* Evita que se desborde */
 }
 
+/* Ajustes para el mapa */
 #map {
-    position: static; /* O usa static si sigue dando problemas */
+    position: relative; /* Evita problemas con elementos flotantes */
     width: 100%;
-    height: 400px; /* Ajusta la altura según necesites */
+    height: 400px; /* Ajusta la altura según necesidad */
+    border-radius: 10px; /* Opcional: hace que se vea mejor */
 }
