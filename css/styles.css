@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     padding-top: 80px; /* Evita que el contenido quede debajo del header */
-    overflow-x: visible; /* Evita desbordamientos horizontales */
+    overflow: visible; /* Evita desbordamientos horizontales */
 }
 
 /* Cabecera y navegación fija */
