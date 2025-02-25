@@ -84,8 +84,8 @@ nav ul li:last-child a {
     white-space: nowrap; /* Evita que el texto se divida */
     overflow: hidden; /* Evita que el contenido sobresalga */
     text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es demasiado largo */
-    max-width: 180px; /* Ajusta el tamaño máximo para evitar cortes */
-    min-width: 120px; /* Asegura un tamaño mínimo adecuado */
+    max-width: 200px; /* Ajusta el tamaño máximo para evitar cortes */
+    min-width: 140px; /* Asegura un tamaño mínimo adecuado */
 }
 
 /* Resalta la página activa */
