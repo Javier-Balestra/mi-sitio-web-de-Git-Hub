@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('/noticias.json') // 🔥 Corrección para Netlify
+    fetch('js/noticias.json') // 🔥 Corrección para Netlify
         .then(response => {
             if (!response.ok) {
                 throw new Error('Error al cargar el archivo JSON');

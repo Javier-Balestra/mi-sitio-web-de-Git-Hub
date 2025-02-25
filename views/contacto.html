@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Mi Sitio Web de GitHub</title>
-    <link rel="stylesheet" href="css/styles.css">
-
-    <!-- Leaflet CSS (sin 'integrity') -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
-
-    <!-- Leaflet JS (sin 'integrity') -->
-    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-
-    <script defer src="js/contacto.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacto - Mi Sitio Web de GitHub</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
+        
+        <!-- Librería Leaflet -->
+        <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+    
+        <!-- Leaflet Routing Machine (Para dibujar rutas en el mapa) -->
+        <script defer src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    
+        <!-- Tu script de contacto -->
+        <script defer src="../js/contacto.js"></script>
+    </head>
 <body>
     <header>
         <div class="logo">
@@ -32,7 +34,7 @@
 
     <main>
         <h2>Contacto</h2>
-        <div id="map"></div> <!-- Aquí se mostrará el mapa -->
+        <div id="map"></div> <!-- Aquí se mostrará el mapa con la ruta -->
         <p>Dirección: Calle Ficticia 123, Ciudad, País</p>
         <p>Teléfono: 123-456-789</p>
         <p>Email: contacto@misitioweb.com</p>
@@ -52,3 +54,4 @@
     </footer>
 </body>
 </html>
+
