@@ -52,6 +52,11 @@ nav {
     position: static;
     width: auto;
     padding: 0;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Mantiene la barra sobre el mapa */
+    overflow: hidden; /* Evita que el contenido se desborde */
 }
 
 /* Mantiene los botones alineados */
@@ -61,6 +66,11 @@ nav ul {
     padding: 0;
     margin: 0;
     gap: 10px;
+    flex-wrap: nowrap; /* Evita que los elementos se envuelvan en otra línea */
+    justify-content: center; /* Centra los elementos en la barra */
+    overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+    white-space: nowrap;
+    padding-right: 20px;
 }
 
 nav ul::-webkit-scrollbar {
@@ -81,6 +91,7 @@ nav ul li a {
     display: block;
     border-radius: 5px;
     text-align: center;
+    min-width: 120px; /* Uniformidad entre botones */
 }
 
 /* Estilos específicos para el botón de contacto */
