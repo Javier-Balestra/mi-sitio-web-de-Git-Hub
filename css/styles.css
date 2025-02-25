@@ -54,6 +54,11 @@ nav ul {
     overflow-x: visible; /* Permite desplazamiento si es necesario */
     white-space: nowrap; /* Asegura que los elementos se mantengan en una línea */
 }
+#contacto-btn {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
 
 nav ul::-webkit-scrollbar {
     display: none; /* Oculta la barra de desplazamiento en navegadores Webkit */
