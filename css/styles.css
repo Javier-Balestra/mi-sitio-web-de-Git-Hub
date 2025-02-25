@@ -60,10 +60,6 @@ nav ul {
     opacity: 1 !important;
 }
 
-nav ul::-webkit-scrollbar {
-    display: none; /* Oculta la barra de desplazamiento en navegadores Webkit */
-}
-
 nav ul li {
     display: inline-block;
 }
