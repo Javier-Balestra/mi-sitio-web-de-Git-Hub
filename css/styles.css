@@ -293,10 +293,10 @@ footer p a {
 }
 
 /* Estilos para el mapa */
-.map-container {
+#map-container {
+    position: static; /* O prueba con relative */
     width: 100%;
-    max-width: 100%;
-    overflow: hidden;
+    height: auto; /* Ajusta según sea necesario */
 }
 
 #map {
