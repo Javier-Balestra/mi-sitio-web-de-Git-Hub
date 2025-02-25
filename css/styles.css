@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     padding-top: 80px; /* Evita que el contenido quede debajo del header */
-    overflow: visible; /* Evita desbordamientos horizontales */
+    overflow-x: hidden; /* Evita desbordamientos horizontales */
 }
 
 /* Cabecera y navegación fija */
@@ -41,6 +41,7 @@ header .logo h1 {
 
 nav {
     max-width: 100%;
+    overflow: visible;
 }
 
 nav ul {
@@ -53,6 +54,7 @@ nav ul {
     justify-content: flex-end;
     overflow-x: auto; /* Permite desplazamiento si es necesario */
     white-space: nowrap; /* Asegura que los elementos se mantengan en una línea */
+    padding-right: 20px;
 }
 
 nav ul li {
@@ -72,7 +74,18 @@ nav ul li a {
 /* Estilos específicos para el botón de contacto */
 nav ul li:last-child {
     flex-shrink: 0;
-    min-width: fit-content; /* Evita que el botón se encoja demasiado */
+}
+
+nav ul li:last-child a {
+    background-color: red !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    white-space: nowrap; /* Evita que el texto se divida */
+    overflow: hidden; /* Evita que el contenido sobresalga */
+    text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es demasiado largo */
+    max-width: 180px; /* Ajusta el tamaño máximo para evitar cortes */
+    min-width: 120px; /* Asegura un tamaño mínimo adecuado */
 }
 
 /* Resalta la página activa */
