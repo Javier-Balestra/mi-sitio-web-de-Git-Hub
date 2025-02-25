@@ -293,10 +293,13 @@ footer p a {
 }
 
 /* Estilos para el mapa */
+.map-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
 #map {
     width: 100%;
-    height: 400px;
-    margin: 20px 0;
-    border: 2px solid #ddd;
-    border-radius: 8px;
+    height: 400px; /* Ajusta la altura según necesites */
 }
