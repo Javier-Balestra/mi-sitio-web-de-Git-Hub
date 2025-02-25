@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     padding-top: 80px; /* Evita que el contenido quede debajo del header */
+    overflow-x: hidden; /* Evita desbordamientos horizontales */
 }
 
 /* Cabecera y navegación fija */
@@ -15,7 +16,7 @@ header {
     width: 100%;
     background: #333;
     color: white;
-    padding: 15px 20px;
+    padding: 15px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,13 +39,19 @@ header .logo h1 {
     font-size: 24px;
 }
 
+nav {
+    max-width: 100%;
+    overflow: hidden;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 10px; /* Reduce el espacio entre elementos */
+    flex-wrap: wrap; /* Permite que los elementos bajen de línea si no caben */
+    justify-content: flex-end; /* Asegura que los elementos no se desborden */
 }
 
 nav ul li {
@@ -55,23 +62,22 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 12px; /* Ajusta el padding para evitar desbordamiento */
     font-weight: bold;
     transition: background 0.3s ease;
     display: block;
+    border-radius: 5px;
 }
 
 /* Resalta la página activa */
 nav ul li a.active {
     background-color: #ffcc00;
     color: black;
-    border-radius: 5px;
 }
 
 /* Efecto al pasar el mouse */
 nav ul li a:hover {
     background-color: #555;
-    border-radius: 5px;
 }
 
 /* Ajuste para pantallas pequeñas */
@@ -79,7 +85,7 @@ nav ul li a:hover {
     nav ul {
         flex-direction: column;
         text-align: center;
-        gap: 10px;
+        gap: 5px;
     }
 
     nav ul li {
@@ -90,6 +96,23 @@ nav ul li a:hover {
         display: block;
         width: 100%;
         text-align: center;
+        padding: 10px;
+    }
+}
+
+/* Ajuste para que el botón de "Contacto" no se corte */
+@media (max-width: 1024px) {
+    nav {
+        width: 100%;
+    }
+    
+    nav ul {
+        justify-content: center; /* Centra los elementos en pantallas medianas */
+    }
+
+    nav ul li a {
+        padding: 10px 10px; /* Ajusta el padding para evitar cortes */
+        font-size: 14px; /* Reduce el tamaño del texto si es necesario */
     }
 }
 
