@@ -44,6 +44,8 @@ nav {
     overflow-x: auto; /* Permite desplazamiento horizontal si hay desbordamiento */
     display: flex; /* Organiza los elementos en línea */
     justify-content: center; /* Centra los elementos en la barra */
+    position: relative;
+    z-index: 1001; /* Asegura que la barra esté sobre el mapa */
 }
 
 nav ul {
