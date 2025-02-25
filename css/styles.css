@@ -69,13 +69,6 @@ nav ul li a {
     border-radius: 5px;
 }
 
-nav ul li a {
-    background-color: red !important;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
 /* Estilos específicos para el botón de contacto */
 nav ul li:last-child {
     flex-shrink: 0;
