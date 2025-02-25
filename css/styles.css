@@ -77,15 +77,9 @@ nav ul li a {
 }
 
 /* Estilos específicos para el botón de contacto */
-nav ul li:last-child a {
-    background-color: red !important;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    white-space: nowrap; /* Evita que el texto se divida */
-    overflow: hidden; /* Evita que el contenido sobresalga */
-    text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es demasiado largo */
-    max-width: 150px; /* Ajusta el tamaño máximo */
+nav ul li:last-child {
+    flex-shrink: 0;
+    min-width: fit-content; /* Evita que el botón se encoja demasiado */
 }
 
 /* Resalta la página activa */
