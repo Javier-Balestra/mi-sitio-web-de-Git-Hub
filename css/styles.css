@@ -51,7 +51,7 @@ nav ul {
     gap: 10px; /* Reduce el espacio entre elementos */
     flex-wrap: nowrap; /* Evita que los elementos se envuelvan a otra línea */
     justify-content: flex-end;
-    overflow-x: auto; /* Permite desplazamiento si es necesario */
+    overflow-x: visible; /* Permite desplazamiento si es necesario */
     white-space: nowrap; /* Asegura que los elementos se mantengan en una línea */
 }
 
@@ -66,7 +66,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px 12px; /* Ajusta el padding para evitar desbordamiento */
+    padding: 10px 15px; /* Ajusta el padding para evitar desbordamiento */
     font-weight: bold;
     transition: background 0.3s ease;
     display: block;
@@ -84,7 +84,7 @@ nav ul li a:hover {
     background-color: #555;
 }
 
-/* Ajuste para pantallas pequeñas */
+/* En pantallas pequeñas, asegurar que todos los elementos sean visibles */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -124,6 +124,13 @@ nav ul li a:hover {
 /* Asegurar visibilidad del botón de Contacto */
 nav ul li:last-child {
     display: block !important; /* Asegura que el botón siempre sea visible */
+}
+
+/* Asegurar que el último elemento ("Contacto") no desaparezca */
+nav ul li:last-child {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: inline-block !important;
 }
 
 /* Contenido principal */
