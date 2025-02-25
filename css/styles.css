@@ -73,23 +73,6 @@ nav ul li a {
     min-width: auto;
 }
 
-/* Estilos específicos para el botón de contacto */
-nav ul li:last-child {
-    flex-shrink: 0;
-}
-
-nav ul li:last-child a {
-    background-color: red !important;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    white-space: nowrap; /* Evita que el texto se divida */
-    overflow: hidden; /* Evita que el contenido sobresalga */
-    text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es demasiado largo */
-    max-width: 200px; /* Ajusta el tamaño máximo para evitar cortes */
-    min-width: 140px; /* Asegura un tamaño mínimo adecuado */
-}
-
 /* Resalta la página activa */
 nav ul li a.active {
     background-color: #ffcc00;
