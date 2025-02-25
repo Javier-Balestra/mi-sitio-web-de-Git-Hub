@@ -69,6 +69,8 @@ nav ul li a {
     transition: background 0.3s ease;
     display: block;
     border-radius: 5px;
+    max-width: none; /* Permite que todos los botones crezcan o se ajusten igual */
+    min-width: auto;
 }
 
 /* Estilos específicos para el botón de contacto */
