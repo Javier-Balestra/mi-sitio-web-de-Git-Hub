@@ -41,7 +41,6 @@ header .logo h1 {
 
 nav {
     max-width: 100%;
-    overflow: hidden;
 }
 
 nav ul {
@@ -50,13 +49,18 @@ nav ul {
     margin: 0;
     display: flex;
     gap: 10px; /* Reduce el espacio entre elementos */
-    flex-wrap: wrap; /* Permite que los elementos bajen de línea si no caben */
-    justify-content: flex-end; /* Asegura que los elementos no se desborden */
+    flex-wrap: nowrap; /* Evita que los elementos se envuelvan a otra línea */
+    justify-content: flex-end;
+    overflow-x: auto; /* Permite desplazamiento si es necesario */
+    white-space: nowrap; /* Asegura que los elementos se mantengan en una línea */
+}
+
+nav ul::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en navegadores Webkit */
 }
 
 nav ul li {
     display: inline-block;
-    white-space: nowrap;
 }
 
 nav ul li a {
@@ -86,6 +90,7 @@ nav ul li a:hover {
         flex-direction: column;
         text-align: center;
         gap: 5px;
+        overflow-x: visible;
     }
 
     nav ul li {
@@ -114,6 +119,11 @@ nav ul li a:hover {
         padding: 10px 10px; /* Ajusta el padding para evitar cortes */
         font-size: 14px; /* Reduce el tamaño del texto si es necesario */
     }
+}
+
+/* Asegurar visibilidad del botón de Contacto */
+nav ul li:last-child {
+    display: block !important; /* Asegura que el botón siempre sea visible */
 }
 
 /* Contenido principal */
