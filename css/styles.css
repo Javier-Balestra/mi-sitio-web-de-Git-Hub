@@ -13,13 +13,14 @@ header {
     display: flex;
     justify-content: space-between; /* Espacio entre el logo y el menú */
     align-items: center;
-    padding: 10px 5%;
+    padding: 15px 20px;
     background: #333;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Contenedor del logo y título */
@@ -65,7 +66,7 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 10px;
+    gap: 15px;
     flex-wrap: nowrap; /* Evita que los elementos se envuelvan en otra línea */
     justify-content: center; /* Centra los elementos en la barra */
     overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
@@ -148,8 +149,29 @@ nav ul li a:hover {
 /* Contenido principal */
 main {
     padding: 20px;
+    margin-top: 80px; /* Deja espacio debajo del header */
     text-align: center;
 }
+
+/* Corregir botón de contacto */
+.contact-button {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.contact-button:hover {
+    background: #218838;
+}
+
 
 /* Galería */
 #gallery {
